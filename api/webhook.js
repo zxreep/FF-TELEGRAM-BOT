@@ -171,6 +171,10 @@ export default async function handler(req, res) {
 
         if (replyText.includes(MARKER_BT1)) {
           // Build url for BT1
+          const chat_id =
+  body.message?.chat.id ||
+  body.callback_query?.message.chat.id;
+          
           const url = buildUrl(BT1_TEMPLATE, { uid: userText });
           await telegram('sendMessage', { chat_id: chatId, text: '⏳ Sending request...' });
           try {
@@ -190,7 +194,10 @@ export default async function handler(req, res) {
           return res.status(200).json({ ok: true });
         }
 
-        if (replyText.includes(MARKER_BT2)) {
+        if (replyText.includes(MARKER_BT2)){ 
+          const chat_id =
+  body.message?.chat.id ||
+  body.callback_query?.message.chat.id;
           const url = buildUrl(BT2_TEMPLATE, { uid: userText });
           await telegram('sendMessage', { chat_id: chatId, text: '⏳ Sending request...' });
           try {
@@ -211,6 +218,9 @@ export default async function handler(req, res) {
         }
 
         if (replyText.includes(MARKER_BT3)) {
+          const chat_id =
+  body.message?.chat.id ||
+  body.callback_query?.message.chat.id;
           const url = buildUrl(BT3_TEMPLATE, { keyword: userText });
           await telegram('sendMessage', { chat_id: chatId, text: '⏳ Sending request...' });
           try {
