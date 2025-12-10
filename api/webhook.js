@@ -9,7 +9,7 @@ if (!TELEGRAM_BOT_TOKEN) {
 
 const API_BASE = (token) => `https://api.telegram.org/bot${token}`;
 
-const BT1_TEMPLATE = 'https://freefire-api.vercel.app/get_player_stats?server=ind&uid={uid}&matchmode=RANKED&gamemode=br';
+const BT1_TEMPLATE = 'https://freefire-apis.vercel.app/get_player_stats?server=ind&uid={uid}&matchmode=RANKED&gamemode=br';
 const BT2_TEMPLATE = 'https://freefire-apis.vercel.app/get_player_personal_show?server=ind&uid={uid}';
 const BT3_TEMPLATE = 'https://freefire-apis.vercel.app/get_search_account_by_keyword?server=ind&keyword={keyword}';
 
