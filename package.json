@@ -1,0 +1,13 @@
+{
+  "name": "telegram-vercel-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for Vercel - handles 3 buttons and sends GET requests with query params",
+  "main": "api/webhook.js",
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
