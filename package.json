@@ -1,0 +1,16 @@
+{
+  "name": "vercel-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot designed for Vercel serverless deployment",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "lint": "echo \"no lint configured\""
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.9"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
